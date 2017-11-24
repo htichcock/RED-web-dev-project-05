@@ -23,9 +23,9 @@ function qod_register_metaboxes() {
 		'id'            => $prefix . 'quote_metabox',
 		'title'         => 'Quotes Meta',
 		'object_types'  => array( 'post', ), // Post type
-		'context'    => 'normal',
-		'priority'   => 'high',
-		'show_names' => true, // Show field names on the left
+		'context'  		  => 'normal',
+		'priority'   		=> 'high',
+		'show_names'	 	=> true, // Show field names on the left
 	) );
 
    $quote_meta->add_field( array(
