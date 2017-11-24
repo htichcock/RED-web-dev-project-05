@@ -1,6 +1,11 @@
 (function($) {
 
-  console.log($);
+  $('#new-quote-button').on('click', function(){
+
+    
+
+
+  });
 
 
 
