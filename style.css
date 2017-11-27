@@ -395,7 +395,8 @@ input[type="submit"] {
   input[type="submit"]:active,
   input[type="submit"]:focus {
     border-color: #009900;
-    color: #009900; }
+    color: #009900;
+    outline: none; }
 
 /* Fields */
 input[type="text"],
@@ -427,7 +428,8 @@ textarea {
   input[type="password"]:focus,
   input[type="search"]:focus,
   textarea:focus {
-    color: #FFFFFF; }
+    color: #FFFFFF;
+    outline: none; }
 
 input[type="text"],
 input[type="email"],
