@@ -2,6 +2,48 @@
 # Page Templates
 --------------------------------------------------------------*/
 
-/* All Archives Page */
+/* Page */
+.page .content-area {
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  li {
+    display: inline-block;
+    margin-right: .75*$base__space-unit;
+    margin-bottom: 0.333*$base__space-unit;
+    @include tablet {
+      @include font-size(1.25);
+    }
+    a{
+      display: inline;
+    }
+  }
+  .wp-tag-cloud li a{
+    @include tablet {
+      font-size: 1.25rem !important; //not sure how to get around the tag cloud inline styles
+    }
+  }
 
-/* Submit a Quote Page */
+  .entry-title {
+    font-weight: 400;
+    @include font-size(2);
+    margin: 2*$base__space-unit 0 $base__space-unit;
+    @include desktop {
+      margin-top: 0;
+    }
+    &::before {
+      content: '';
+    }
+  }
+}
+/* Archive / Search results */
+.page-header {
+  border-bottom: $border__dashed;
+}
+.archive {
+  article {
+    border-bottom: $border__dashed;
+  }
+}

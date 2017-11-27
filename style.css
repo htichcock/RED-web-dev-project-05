@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Theme Name: Quotes on Dev  Theme
 Theme URI: http://underscores.me/
@@ -321,7 +322,9 @@ html {
 
 body {
   background: #222222;
-  /* Fallback for when there is no custom background color defined. */ }
+  /* Fallback for when there is no custom background color defined. */
+  font-weight: 300;
+  line-height: 1.5; }
 
 blockquote, q {
   quotes: "" ""; }
@@ -372,15 +375,15 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  border: 1px solid;
+  border: 2px solid;
   border-color: #00cc00;
   border-radius: 3px;
   background: #222222;
   color: #00cc00;
   font-size: 16px;
   font-size: 1rem;
-  line-height: 1.5;
-  margin: 0 0 0.999rem; }
+  line-height: 1;
+  padding: 0.75rem 2.25rem; }
   button:hover, button:active, button:focus,
   input[type="button"]:hover,
   input[type="button"]:active,
@@ -401,22 +404,29 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-  border: 1px solid;
+  border: 2px solid;
   border-color: #00cc00;
   border-radius: 3px;
   color: #FFFFFF;
   line-height: 1.5;
-  font-size: 14.4px;
-  font-size: 0.9rem;
   background: inherit;
   margin: 0 0 0.999rem;
-  padding: input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], textarea; }
-  input[type="text"] :focus,
-  input[type="email"] :focus,
-  input[type="url"] :focus,
-  input[type="password"] :focus,
-  input[type="search"] :focus,
-  textarea :focus {
+  padding: 3px; }
+  @media (min-width: 620px) {
+    input[type="text"],
+    input[type="email"],
+    input[type="url"],
+    input[type="password"],
+    input[type="search"],
+    textarea {
+      font-size: 20px;
+      font-size: 1.25rem; } }
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="url"]:focus,
+  input[type="password"]:focus,
+  input[type="search"]:focus,
+  textarea:focus {
     color: #FFFFFF; }
 
 input[type="text"],
@@ -425,23 +435,60 @@ input[type="url"],
 input[type="password"],
 input[type="search"] {
   padding: 3px;
-  font-size: 14.4px;
-  font-size: 0.9rem;
-  margin: 0 0 0.999rem; }
+  margin: 0 0 0.999rem;
+  width: 60%; }
+  @media (min-width: 620px) {
+    input[type="text"],
+    input[type="email"],
+    input[type="url"],
+    input[type="password"],
+    input[type="search"] {
+      font-size: 20px;
+      font-size: 1.25rem; } }
 
 textarea {
   padding-left: 3px;
   width: 100%;
-  font-size: 14.4px;
-  font-size: 0.9rem;
   margin: 0 0 0.999rem; }
+  @media (min-width: 620px) {
+    textarea {
+      font-size: 20px;
+      font-size: 1.25rem; } }
 
 /* Labels */
 label {
-  font-size: 14.4px;
-  font-size: 0.9rem;
   display: block;
   margin: 0 0 0.4995rem; }
+  @media (min-width: 620px) {
+    label {
+      font-size: 20px;
+      font-size: 1.25rem; } }
+
+/* Search */
+.search-form {
+  padding: 0;
+  margin: 0; }
+  .search-form fieldset {
+    padding: 0;
+    margin: 0;
+    border: none; }
+    .search-form fieldset label {
+      display: inline-block; }
+      .search-form fieldset label input {
+        width: 240px; }
+    .search-form fieldset button {
+      border: none;
+      display: inline-block;
+      font-size: 20px;
+      font-size: 1.25rem;
+      padding: 0.75rem; }
+
+/* quote submit */
+.submit-success-message {
+  color: #00cc00;
+  position: absolute; }
+  .submit-success-message.fail {
+    color: yellow; }
 
 /*--------------------------------------------------------------
 # Navigation
@@ -484,20 +531,17 @@ a {
       .main-navigation ul ul li:hover > ul,
       .main-navigation ul ul li.focus > ul {
         left: 100%; }
-      .main-navigation ul ul a {
-        width: 200px; }
     .main-navigation ul li:hover > ul,
     .main-navigation ul li.focus > ul {
       left: auto; }
   .main-navigation li {
     float: left;
     position: relative; }
-    .main-navigation li ::after {
+    .main-navigation li::after {
       content: "|";
       margin: 0 0.75rem;
       color: #FFFFFF; }
   .main-navigation a {
-    display: block;
     text-decoration: none; }
 
 /* Small menu. */
@@ -529,6 +573,9 @@ a {
   float: right;
   text-align: right;
   width: 50%; }
+
+.number-pagination .page-numbers {
+  margin-right: 0.4995rem; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -613,6 +660,105 @@ a {
   clear: both;
   margin: 0 0 1.5rem; }
 
+.hfeed {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 2.5%; }
+
+.logo {
+  display: block;
+  width: 300px; }
+  @media (min-width: 620px) {
+    .logo {
+      width: 500px;
+      padding: 1.125rem 0 0; } }
+  @media (min-width: 1080px) {
+    .logo {
+      margin: 0 auto;
+      width: 700px; } }
+
+@media (min-width: 1080px) {
+  .site-content {
+    margin: 4.5rem 175px 1.5rem;
+    position: relative; }
+    .site-content::before {
+      position: absolute;
+      left: -175px;
+      top: 0;
+      content: '\f10d';
+      font-family: FontAwesome;
+      font-size: 125px;
+      line-height: 125px;
+      color: #00cc00; }
+    .site-content::after {
+      position: absolute;
+      right: -175px;
+      top: 0;
+      content: '\f10e';
+      font-family: FontAwesome;
+      font-size: 125px;
+      line-height: 125px;
+      color: #00cc00; } }
+
+.entry-content p {
+  font-size: 20px;
+  font-size: 1.25rem;
+  margin-bottom: 0.4995rem; }
+  @media (min-width: 620px) {
+    .entry-content p {
+      font-size: 28px;
+      font-size: 1.75rem; } }
+  @media (min-width: 1080px) {
+    .entry-content p {
+      font-size: 40px;
+      font-size: 2.5rem; } }
+
+.entry-meta {
+  margin-bottom: 2.25rem; }
+
+.entry-title::before {
+  content: "— "; }
+
+.entry-title p, .entry-title {
+  display: inline-block;
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-weight: 300; }
+
+.source {
+  font-style: italic;
+  font-size: 20px;
+  font-size: 1.25rem; }
+  .source::before {
+    content: ", ";
+    font-style: normal;
+    color: #FFFFFF; }
+  .source:empty::before {
+    content: ""; }
+
+@media (min-width: 1080px) {
+  #new-quote-button {
+    display: block;
+    margin: 0 auto; } }
+
+.site-footer {
+  margin: 4.5rem 0 3rem; }
+  @media (min-width: 620px) {
+    .site-footer {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start; }
+      .site-footer .main-navigation {
+        width: auto; } }
+  @media (min-width: 1080px) {
+    .site-footer {
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end; } }
+
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
@@ -633,5 +779,41 @@ object {
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
-/* All Archives Page */
-/* Submit a Quote Page */
+/* Page */
+.page .content-area ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0; }
+
+.page .content-area li {
+  display: inline-block;
+  margin-right: 1.125rem;
+  margin-bottom: 0.4995rem; }
+  @media (min-width: 620px) {
+    .page .content-area li {
+      font-size: 20px;
+      font-size: 1.25rem; } }
+  .page .content-area li a {
+    display: inline; }
+
+@media (min-width: 620px) {
+  .page .content-area .wp-tag-cloud li a {
+    font-size: 1.25rem !important; } }
+
+.page .content-area .entry-title {
+  font-weight: 400;
+  font-size: 32px;
+  font-size: 2rem;
+  margin: 3rem 0 1.5rem; }
+  @media (min-width: 1080px) {
+    .page .content-area .entry-title {
+      margin-top: 0; } }
+  .page .content-area .entry-title::before {
+    content: ''; }
+
+/* Archive / Search results */
+.page-header {
+  border-bottom: 1px dashed #ffffff; }
+
+.archive article {
+  border-bottom: 1px dashed #ffffff; }

@@ -8,14 +8,14 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 1px solid;
+	border: 2px solid;
 	border-color: $color__brand;
 	border-radius: 3px;
 	background: $color__background-body;
 	color: $color__brand;
 	@include font-size(1);
-	line-height: $font__line-height-body;
-	margin: 0 0 0.666*$base__space-unit;
+	line-height: 1;
+	padding: 0.5*$base__space-unit 1.5*$base__space-unit;
 	&:hover,
 	&:active,
 	&:focus {
@@ -32,15 +32,17 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-  border: 1px solid;
+  border: 2px solid;
 	border-color: $color__brand;
 	border-radius: 3px;
 	color: $color__text-main;
 	line-height: $font__line-height-body;
-	@include font-size(0.9);
+	@include tablet {
+		@include font-size(1.25);
+	}
 	background: inherit;
 	margin: 0 0 0.666*$base__space-unit;
-	padding:
+	padding: 3px;
 	&:focus {
 		color: $color__text-main;
 	}
@@ -52,21 +54,63 @@ input[type="url"],
 input[type="password"],
 input[type="search"] {
 	padding: 3px;
-	@include font-size(0.9);
+	@include tablet {
+		@include font-size(1.25);
+	}
 	margin: 0 0 0.666*$base__space-unit;
+	width: 60%;
 }
 
 textarea {
 	padding-left: 3px;
 	width: 100%;
-	@include font-size(0.9);
+	@include tablet {
+		@include font-size(1.25);
+	}
 	margin: 0 0 0.666*$base__space-unit;
 }
 
 /* Labels */
 
 label {
-	@include font-size(0.9);
+	@include tablet {
+		@include font-size(1.25);
+	}
 	display: block;
 	margin: 0 0 0.333*$base__space-unit;
+}
+
+/* Search */
+
+.search-form {
+	
+	padding: 0;
+	margin: 0;
+	
+	fieldset {
+		padding: 0;
+		margin: 0;
+		border: none;
+		label {
+			display: inline-block;
+			input {
+				width: 240px;
+			}
+		}
+		button {
+			border: none;
+			display: inline-block;
+			@include font-size(1.25);
+			padding: 0.5*$base__space-unit;
+		}
+	}
+}
+/* quote submit */
+
+.submit-success-message {
+	color: $color__brand;
+	position: absolute;
+	&.fail {
+		color: yellow;
+	}
 }

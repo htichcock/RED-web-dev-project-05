@@ -2,7 +2,7 @@
 /**
  * Custom functions that act independently of the theme templates.
  *
- * @package QOD_Starter_Theme
+ * @package QOD_Theme
  */
 
 /**
@@ -65,6 +65,9 @@ function qod_modify_post_title( $input ) {
     }
     if(  is_archive()  && !is_admin() && $query->is_main_query() ){
         $query->set( 'posts_per_page', 5);
+    }
+    if(  is_search()  && !is_admin() && $query->is_main_query() ){
+        $query->set( 'posts_per_page', 10);
     }
  }
  add_action( 'pre_get_posts', 'qod_modify_archives' );

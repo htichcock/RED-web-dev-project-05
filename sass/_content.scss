@@ -31,3 +31,101 @@
 	clear: both;
 	margin: 0 0 $base__space-unit;
 }
+
+.hfeed {
+	max-width: $desktop__width;
+	margin: 0 auto;
+	padding: 2.5%;
+}
+.logo {
+	display: block;
+	width: 300px;
+	@include tablet {
+		width: 500px;
+		padding: 0.75*$base__space-unit 0 0;
+	}
+	@include desktop {
+		margin: 0 auto;
+		width: 700px;
+	}
+}
+.site-content {
+	@include desktop {
+		margin: 4.5rem 175px 1.5rem;
+		position: relative;
+		&::before {
+			position: absolute;
+			left:-175px;
+			top:0;
+			content:'\f10d';
+			font-family: FontAwesome;
+			font-size: 125px;
+			line-height: 125px;
+			color: $color__brand;
+		}
+		&::after {
+			position: absolute;
+			right:-175px;
+			top:0;
+			content:'\f10e';
+			font-family: FontAwesome;
+			font-size: 125px;
+			line-height: 125px;
+			color: $color__brand;
+		}
+	}
+}
+.entry-content p {
+	@include font-size(1.25);
+	margin-bottom: 0.333*$base__space-unit;
+	@include tablet {
+		@include font-size(1.75);
+	}
+	@include desktop {
+		@include font-size(2.5);
+	}
+}
+.entry-meta {
+	margin-bottom: 1.5*$base__space-unit;
+}
+.entry-title {
+	&::before{
+		content: "— ";
+	}
+	p, & {
+		display: inline-block;
+		@include font-size(1.25);
+		font-weight: 300;
+	}
+}
+.source {
+	font-style: italic;
+	@include font-size(1.25);
+	&::before {
+		content: ", ";
+		font-style: normal;
+		color: $color__text-main;
+	}
+	&:empty::before {
+		content: "";
+	}
+}
+#new-quote-button {
+	@include desktop {
+		display: block;
+		margin: 0 auto;
+	}
+}
+.site-footer {
+	margin: 3*$base__space-unit 0 2*$base__space-unit;
+	@include tablet {
+		display: flex;
+		justify-content: flex-start;
+		.main-navigation {
+			width: auto;
+		}
+	}
+	@include desktop {
+		justify-content: flex-end;
+	}
+}

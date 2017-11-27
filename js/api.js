@@ -7,12 +7,12 @@ $(function() {
       slug: post_vars.slug, 
       source: post_vars.source, 
       source_url: post_vars.source_url,
-      content: post_vars.content, 
+      content: '<p>'+post_vars.content+'</p>', 
       author: post_vars.title
     }, null, document.location.href);
   }
   $('#new-quote-button').on('click', function(e){
-    var url = api_vars.root_url + 'wp/v2/posts?filter[orderby]=rand&filter[posts_per_page]=1';
+    var url = api_vars.root_url + 'wp/v2/posts?filter[orderby]=rand&filter[posts_per_page]=1'; //TODO: get rid of chance for repeating post
     e.preventDefault();
     $.ajax({
       method: 'get',
@@ -37,9 +37,9 @@ $(function() {
                           author: data[0].title.rendered
                         }, null, api_vars.home_url + '/' + data[0].slug);
     }).fail( function() {
-      $('.entry-title').text('- QuotesOnDev');
+      $('.entry-title').text('QuotesOnDev');
       $('.entry-content').html('<p>Oops! Something went wrong. Please try again!</p>\n');
-      $('.source').html(', <a>Take me home!</a>');
+      $('.source').html('<a>Take me home!</a>');
       $('.source a').attr('href' , api_vars.home_url);   
     }).always( function() {
 

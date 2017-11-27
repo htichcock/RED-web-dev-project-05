@@ -58,9 +58,6 @@ a {
 				}
 			}
 
-			a {
-				width: 200px;
-			}
 
 			:hover > a,
 			.focus > a {
@@ -79,24 +76,17 @@ a {
 	li {
 		float: left;
 		position: relative;
-		::after {
+		&::after {
 			content: "|";
 			margin: 0  0.5*$base__space-unit;
 			color: $color__text-main;
 		}
-		&:hover > a,
-		&.focus > a {
-		}
 	}
 	a {
-		display: block;
 		text-decoration: none;
 	}
 
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a {
-	}
+	
 }
 
 /* Small menu. */
@@ -132,5 +122,11 @@ a {
 		float: right;
 		text-align: right;
 		width: 50%;
+	}
+}
+
+.number-pagination {
+	.page-numbers {
+		margin-right: 0.333*$base__space-unit;
 	}
 }

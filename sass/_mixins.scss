@@ -11,3 +11,14 @@
 	font-size: $sizeValue * 1rem;
 }
 
+@mixin tablet {
+  @media (min-width: $tablet__width) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop__width) {
+    @content;
+  }
+}
