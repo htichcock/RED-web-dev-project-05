@@ -666,12 +666,12 @@ a {
   padding: 2.5%; }
 
 .logo {
+  padding: 2.499rem 0 0;
   display: block;
   width: 300px; }
   @media (min-width: 620px) {
     .logo {
-      width: 500px;
-      padding: 1.125rem 0 0; } }
+      width: 500px; } }
   @media (min-width: 1080px) {
     .logo {
       margin: 0 auto;

@@ -1,23 +1,22 @@
-# Quotes on Dev Starter
+# Quotes on Dev
 
-A WordPress starter theme for the Quotes on Dev project, forked from Underscores.
+a project in WordPress using the Rest Api
 
-## Installation
+![Quotes on Dev screenshot](https://i.imgur.com/jB0dc8Q.png)
 
-### 1. Download me (don't clone me!)
+## New technologies used
 
-Then add me to your `wp-content/themes` directory.
+Rest API, and utilising the browsers history object
 
-### 2. Rename the `quotesondev-starter-master` directory
+## Personal learnings
 
-Make sure that the theme directory name is project appropriate! Do you need `starter` or `master` in the directory name?
+I am becoming more acustomed to the _underscores starter theme(knowing what to delete and what to add right away). I also found I learned a bit about localizing scripts, which came in handy making the post data available to api.js. 
 
-### 3. Install the dev dependencies
+Something I'm happy with is I used the browser history state object to keep track of the small amount of post data I was using. This allowed the site to not reload or fetch any extra data when navigating with the back and forward buttons. I found it was fairly performant.
 
-Next you'll need to run `npm install` **inside your theme directory** to install the npm packages you'll need for Gulp, etc.
 
-### 4. Update the proxy in `gulpfile.js`
 
-Lastly, be sure to update your `gulpfile.js` with the appropriate URL for the Browsersync proxy (so change `localhost[:port-here]/[your-dir-name-here]` to the appropriate localhost URL).
+## To Do
 
-And now would be a good time to `git init` :)
+- There is an annoying bug where occasionly the random post is the same as the one you are currently viewing, which makes the site feel unresponsive. I really want to fix this.
+
