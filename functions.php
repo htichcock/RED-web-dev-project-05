@@ -53,8 +53,8 @@ function qod_scripts() {
 		wp_enqueue_script( 'qod-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );
     
     if(function_exists('rest_url')) {
-        wp_enqueue_script( 'api', get_template_directory_uri() . '/build/js/api.min.js', array('jquery'), false, true );
-        wp_localize_script('api', 'api_vars', array(
+        wp_enqueue_script( 'qod_api', get_template_directory_uri() . '/build/js/api.min.js', array('jquery'), false, true );
+        wp_localize_script('qod_api', 'api_vars', array(
             'root_url' => esc_url_raw( rest_url() ),
             'home_url' => esc_url_raw( home_url() ),
             'nonce'    => wp_create_nonce( 'wp_rest' ),
@@ -64,6 +64,20 @@ function qod_scripts() {
     }
 }
 add_action( 'wp_enqueue_scripts', 'qod_scripts' );
+
+function localize_post_meta( $post ) {
+    if (function_exists('rest_url') && wp_script_is( 'qod_api', 'enqueued' )) {
+        wp_localize_script( 'qod_api', 'post_vars', array(
+            'id'        => $post->ID,
+            'slug'      => $post->post_name,
+            'title'     => $post->post_title,
+            'content'   => $post->post_content,
+            'source'    => get_post_meta( $post->ID, '_qod_quote_source', true ),
+            'source_url'=> get_post_meta( $post->ID, '_qod_quote_source_url', true )
+        ) );
+    }
+}
+add_action( 'the_post' , 'localize_post_meta' );
 /**
  * Custom functions that act independently of the theme templates.
  */

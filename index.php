@@ -2,7 +2,7 @@
 /**
  * The main template file.
  *
- * @package QOD_Starter_Theme
+ * @package QOD_Theme
  */
 
 get_header(); ?>
@@ -24,8 +24,6 @@ get_header(); ?>
 				<?php get_template_part( 'template-parts/content' ); ?>
 
 			<?php endwhile; ?>
-
-			<?php the_posts_navigation(); ?>
 
 		<?php else : ?>
 

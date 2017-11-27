@@ -36,7 +36,7 @@ get_header(); ?>
           </div>
 
           <div>
-            <input type="submit" value="Submit Quote">
+            <input type="submit" value="Submit Quote" id="quote-submit">
           </div>
 
           <p class="submit-success-message"></p>

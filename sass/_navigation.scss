@@ -6,7 +6,7 @@
 
 a {
 	color: $color__link;
-
+	text-decoration: none;
 	&:visited {
 		color: $color__link-visited;
 	}
@@ -79,7 +79,11 @@ a {
 	li {
 		float: left;
 		position: relative;
-
+		::after {
+			content: "|";
+			margin: 0  0.5*$base__space-unit;
+			color: $color__text-main;
+		}
 		&:hover > a,
 		&.focus > a {
 		}
@@ -101,14 +105,14 @@ a {
 	display: block;
 }
 
-@media screen and (min-width: 768px) {
-	.menu-toggle {
-		display: none;
-	}
-	.main-navigation ul {
-		display: block;
-	}
+
+.menu-toggle {
+	display: none;
 }
+.main-navigation ul {
+	display: block;
+}
+
 
 .comment-navigation,
 .posts-navigation,

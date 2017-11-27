@@ -1,9 +1,9 @@
 /*!
-Theme Name: Quotes on Dev Starter Theme
+Theme Name: Quotes on Dev  Theme
 Theme URI: http://underscores.me/
 Author: RED Academy
 Author URI: http://www.redacademy.com
-Description: A WordPress starter theme for the Quotes on Dev project, forked from Underscores.
+Description: A WordPress  theme for the Quotes on Dev project, forked from Underscores.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -223,29 +223,29 @@ th {
 --------------------------------------------------------------*/
 @font-face {
   font-family: 'Exo';
-  src: url("../../Exo-LightItalic.eot");
-  src: local("Exo LightItalic"), local("Exo-LightItalic"), url("../../Exo-LightItalic.eot?#iefix") format("embedded-opentype"), url("../../Exo-LightItalic.woff") format("woff"), url("../../Exo-LightItalic.ttf") format("truetype"), url("../../Exo-LightItalic.svg#Exo-LightItalic") format("svg");
+  src: url("../../fonts/Exo-LightItalic.eot");
+  src: local("Exo LightItalic"), local("Exo-LightItalic"), url("../../fonts/Exo-LightItalic.eot?#iefix") format("embedded-opentype"), url("../../fonts/Exo-LightItalic.woff") format("woff"), url("../../fonts/Exo-LightItalic.ttf") format("truetype"), url("../../fonts/Exo-LightItalic.svg#Exo-LightItalic") format("svg");
   font-weight: 300;
   font-style: italic; }
 
 @font-face {
   font-family: 'Exo';
-  src: url("../../Exo-Light.eot");
-  src: local("Exo Light"), local("Exo-Light"), url("../../Exo-Light.eot?#iefix") format("embedded-opentype"), url("../../Exo-Light.woff") format("woff"), url("../../Exo-Light.ttf") format("truetype"), url("../../Exo-Light.svg#Exo-Light") format("svg");
+  src: url("../../fonts/Exo-Light.eot");
+  src: local("Exo Light"), local("Exo-Light"), url("../../fonts/Exo-Light.eot?#iefix") format("embedded-opentype"), url("../../fonts/Exo-Light.woff") format("woff"), url("../../fonts/Exo-Light.ttf") format("truetype"), url("../../fonts/Exo-Light.svg#Exo-Light") format("svg");
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
   font-family: 'Exo';
-  src: url("../../Exo-Medium.eot");
-  src: local("Exo Medium"), local("Exo-Medium"), url("../../Exo-Medium.eot?#iefix") format("embedded-opentype"), url("../../Exo-Medium.woff") format("woff"), url("../../Exo-Medium.ttf") format("truetype"), url("../../Exo-Medium.svg#Exo-Medium") format("svg");
+  src: url("../../fonts/Exo-Medium.eot");
+  src: local("Exo Medium"), local("Exo-Medium"), url("../../fonts/Exo-Medium.eot?#iefix") format("embedded-opentype"), url("../../fonts/Exo-Medium.woff") format("woff"), url("../../fonts/Exo-Medium.ttf") format("truetype"), url("../../fonts/Exo-Medium.svg#Exo-Medium") format("svg");
   font-weight: 500;
   font-style: normal; }
 
 @font-face {
   font-family: 'Exo';
-  src: url("../../Exo-MediumItalic.eot");
-  src: local("Exo MediumItalic"), local("Exo-MediumItalic"), url("../../Exo-MediumItalic.eot?#iefix") format("embedded-opentype"), url("../../Exo-MediumItalic.woff") format("woff"), url("../../Exo-MediumItalic.ttf") format("truetype"), url("../../Exo-MediumItalic.svg#Exo-MediumItalic") format("svg");
+  src: url("../../fonts/Exo-MediumItalic.eot");
+  src: local("Exo MediumItalic"), local("Exo-MediumItalic"), url("../../fonts/Exo-MediumItalic.eot?#iefix") format("embedded-opentype"), url("../../fonts/Exo-MediumItalic.woff") format("woff"), url("../../fonts/Exo-MediumItalic.ttf") format("truetype"), url("../../fonts/Exo-MediumItalic.svg#Exo-MediumItalic") format("svg");
   font-weight: 500;
   font-style: italic; }
 
@@ -257,8 +257,8 @@ button,
 input,
 select,
 textarea {
-  color: #404040;
-  font-family: sans-serif;
+  color: #FFFFFF;
+  font-family: "Exo", sans-serif;
   font-size: 1rem;
   line-height: 1.5; }
 
@@ -310,7 +310,7 @@ big {
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-size: 1rem; }
+  font-size: 16px; }
 
 *,
 *:before,
@@ -320,7 +320,7 @@ html {
           box-sizing: inherit; }
 
 body {
-  background: #fff;
+  background: #222222;
   /* Fallback for when there is no custom background color defined. */ }
 
 blockquote, q {
@@ -373,33 +373,26 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   border: 1px solid;
-  border-color: #ccc #ccc #bbb;
+  border-color: #00cc00;
   border-radius: 3px;
-  background: #e6e6e6;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-  color: rgba(0, 0, 0, 0.8);
-  font-size: .75rem;
-  line-height: 1;
-  padding: .6rem 1rem .4rem;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); }
-  button:hover,
+  background: #222222;
+  color: #00cc00;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 0 0.999rem; }
+  button:hover, button:active, button:focus,
   input[type="button"]:hover,
-  input[type="reset"]:hover,
-  input[type="submit"]:hover {
-    border-color: #ccc #bbb #aaa;
-    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
-            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02); }
-  button:active, button:focus,
   input[type="button"]:active,
   input[type="button"]:focus,
+  input[type="reset"]:hover,
   input[type="reset"]:active,
   input[type="reset"]:focus,
+  input[type="submit"]:hover,
   input[type="submit"]:active,
   input[type="submit"]:focus {
-    border-color: #aaa #bbb #bbb;
-    -webkit-box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
-            box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15); }
+    border-color: #009900;
+    color: #009900; }
 
 /* Fields */
 input[type="text"],
@@ -408,38 +401,59 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-  color: #666;
-  border: 1px solid #ccc;
-  border-radius: 3px; }
-  input[type="text"]:focus,
-  input[type="email"]:focus,
-  input[type="url"]:focus,
-  input[type="password"]:focus,
-  input[type="search"]:focus,
-  textarea:focus {
-    color: #111; }
+  border: 1px solid;
+  border-color: #00cc00;
+  border-radius: 3px;
+  color: #FFFFFF;
+  line-height: 1.5;
+  font-size: 14.4px;
+  font-size: 0.9rem;
+  background: inherit;
+  margin: 0 0 0.999rem;
+  padding: input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], textarea; }
+  input[type="text"] :focus,
+  input[type="email"] :focus,
+  input[type="url"] :focus,
+  input[type="password"] :focus,
+  input[type="search"] :focus,
+  textarea :focus {
+    color: #FFFFFF; }
 
 input[type="text"],
 input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"] {
-  padding: 3px; }
+  padding: 3px;
+  font-size: 14.4px;
+  font-size: 0.9rem;
+  margin: 0 0 0.999rem; }
 
 textarea {
   padding-left: 3px;
-  width: 100%; }
+  width: 100%;
+  font-size: 14.4px;
+  font-size: 0.9rem;
+  margin: 0 0 0.999rem; }
+
+/* Labels */
+label {
+  font-size: 14.4px;
+  font-size: 0.9rem;
+  display: block;
+  margin: 0 0 0.4995rem; }
 
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
 /* Links */
 a {
-  color: royalblue; }
+  color: #00cc00;
+  text-decoration: none; }
   a:visited {
-    color: purple; }
+    color: #00cc00; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: #009900; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -478,6 +492,10 @@ a {
   .main-navigation li {
     float: left;
     position: relative; }
+    .main-navigation li ::after {
+      content: "|";
+      margin: 0 0.75rem;
+      color: #FFFFFF; }
   .main-navigation a {
     display: block;
     text-decoration: none; }
@@ -487,11 +505,11 @@ a {
 .main-navigation.toggled ul {
   display: block; }
 
-@media screen and (min-width: 768px) {
-  .menu-toggle {
-    display: none; }
-  .main-navigation ul {
-    display: block; } }
+.menu-toggle {
+  display: none; }
+
+.main-navigation ul {
+  display: block; }
 
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
