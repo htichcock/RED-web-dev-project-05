@@ -81,7 +81,10 @@ $(function() {
             xhr.setRequestHeader( 'X-WP-Nonce', api_vars.nonce );
         }
       }).done( function() {
-
+        $('#quote-author').val('');
+        $('#quote-content').val('');
+        $('#quote-source').val('');
+        $('#quote-source-url').val('');
         $('.submit-success-message').text(api_vars.success);
         $('.submit-success-message').removeClass('fail');
 
